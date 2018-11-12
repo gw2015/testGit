@@ -1,5 +1,7 @@
 ﻿git命令：
 
+辅助参数 -f 强制   -d 删除  -D 强制删除 -a 所有
+
 1.产生一个git项目
 初始化一个git项目，命令：git init
 会在当前目录下生成一个.git文件夹，使当前目录变为一个git仓库（每个git项目都有.git文件夹）；
@@ -54,8 +56,32 @@ git diff 某次提交的ID 文件名
 git merge 分支名；和当前分支合并，可能会产生冲突
 删除暂存区文件，不影响工作区
 git rm --cached 文件名
+用暂存区文件，覆盖工作区文件
+git checkout 文件名；
+用版本库文件覆盖工作区文件
+git checkout 节点sha 文件名；
 
-。。。。。
+8.提交
+工作区修改提交到暂存区
+git add 文件名；
+暂存区提交到版本库
+git commit 文件名 -m 描述信息；
+修改描述信息
+git commit --amend -m 描述信息；
+版本库提交到远程仓库
+git push
+
+
+9.节点--git以每次的commit为一个节点，每个节点会有一个串码标识
+查看某分支的版本库所有提交
+git log 分支名（远程分支要加远程库别称）
+查看某分支工作区和暂存区的所有变化
+git reflog 分支名（远程分支要加远程库别称）
+
+切换节点
+git reset --hard HEAD^ ；HEAD表示当前指针位置，^表示上一个版本，多一个^就往前推一个版本
+git reset --hard HEAD~3；复数
+git reset --hard 节点串码；回退到某个版本
 
 
 
