@@ -84,6 +84,7 @@ git reset --hard HEAD~3；复数
 git reset --hard 节点串码；回退到某个版本
 
 
+、、、、、、、、、、、、、、、、、、
 
 
 
